@@ -1,13 +1,12 @@
 package com.gyant.sdksamplejava;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.FrameLayout;
-import com.gyant.gyantchatsdk.GyantChat;
-import com.gyant.gyantchatsdk.GyantChatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 

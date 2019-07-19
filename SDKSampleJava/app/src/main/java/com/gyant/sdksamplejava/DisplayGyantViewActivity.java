@@ -1,8 +1,7 @@
 package com.gyant.sdksamplejava;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -15,11 +14,9 @@ public class DisplayGyantViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_gyant_view);
 
-        GyantChat gyantChat = new GyantChat();
+        GyantChat.init( "client_id",  "patient_id", true);
 
-        gyantChat.gyantChatInit("client_id",  "patient_id", true);
-
-        View gyantView = gyantChat.gyantChatView(this, getLifecycle());
+        View gyantView = GyantChat.creatView(this, getLifecycle());
 
         FrameLayout frameLayout = (FrameLayout) findViewById(R.id.frame_layout);
         frameLayout.addView(gyantView);
