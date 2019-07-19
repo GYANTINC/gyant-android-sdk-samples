@@ -14,7 +14,7 @@ public class DisplayGyantViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_gyant_view);
 
-        GyantChat.init( "client_id",  "patient_id", true);
+        GyantChat.start( "client_id",  "patient_id", true);
 
         View gyantView = GyantChat.creatView(this, getLifecycle());
 

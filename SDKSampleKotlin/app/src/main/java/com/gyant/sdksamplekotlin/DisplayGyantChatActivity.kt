@@ -7,7 +7,7 @@ import com.gyant.gyantchatsdk.GyantChatActivity
 class DisplayGyantChatActivity : GyantChatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        GyantChat().gyantChatInit( "clientID",  "patientID", true);
+        GyantChat.start( "clientID",  "patientID", true);
         super.onCreate(savedInstanceState)
     }
 }
