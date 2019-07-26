@@ -13,8 +13,7 @@ public class DisplayFragmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_fragment);
 
-
-        GyantChat.init( "client_id",  "patient_id", true);
+        GyantChat.start( "client_id",  "patient_id", true);
 
         Fragment frag = GyantChat.createFragment();
 
