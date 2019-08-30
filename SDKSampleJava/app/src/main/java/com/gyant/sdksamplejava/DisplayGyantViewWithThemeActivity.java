@@ -34,7 +34,7 @@ public class DisplayGyantViewWithThemeActivity extends AppCompatActivity {
         themeMap.put("bot", botPalette);
         themeMap.put("provider", providerPalette);
 
-        GyantChat.start( "client_id",  "patient_id", true);
+        GyantChat.start( "client_id",  "patient_id", true, themeMap);
 
         this.gyantView = GyantChat.creatView(this, getLifecycle());
 
