@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SDKSampleJava</string>
+    <string name="title_activity_display_gyant_view_with_theme">DisplayGyantViewWithThemeActivity
+    </string>
 </resources>

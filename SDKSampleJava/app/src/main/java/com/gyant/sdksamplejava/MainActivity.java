@@ -29,4 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayGyantChatActivity.class);
         startActivity(intent);
     }
+
+    public void changeToViewWithThemePage(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithThemeActivity.class);
+        startActivity(intent);
+    }
 }

@@ -29,4 +29,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun changeToViewWithThemePage(view: View) {
+        val intent = Intent(this, DisplayGyantViewWithThemeActivity::class.java)
+        startActivity(intent)
+    }
+
 }

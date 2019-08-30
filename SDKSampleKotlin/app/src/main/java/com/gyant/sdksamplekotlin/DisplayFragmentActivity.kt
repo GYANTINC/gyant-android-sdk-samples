@@ -4,11 +4,14 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 
 import android.os.Bundle
+import android.support.annotation.NonNull
+
 
 import com.gyant.gyantchatsdk.GyantChat
+import com.gyant.gyantchatsdk.GyantFragment
 
 class DisplayFragmentActivity : AppCompatActivity() {
-    internal var frag: GyantFragment
+    internal lateinit var frag: GyantFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,7 +27,7 @@ class DisplayFragmentActivity : AppCompatActivity() {
             .commit();
     }
 
-    fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
+    override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
         this.frag.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }
