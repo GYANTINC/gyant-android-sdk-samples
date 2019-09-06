@@ -1,11 +1,8 @@
 package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import com.gyant.gyantchatsdk.GyantChat;
@@ -34,9 +31,15 @@ public class DisplayGyantViewWithThemeActivity extends AppCompatActivity {
         themeMap.put("bot", botPalette);
         themeMap.put("provider", providerPalette);
 
-        GyantChat.start( "client_id",  "patient_id", true, themeMap);
 
-        this.gyantView = GyantChat.creatView(this, getLifecycle());
+
+        GyantChat gyantChat = GyantChat.getInstance()
+                .clientId("client_id")
+                .patientId("patient_id")
+                .isDev(true)
+                .withTheme(themeMap).start();
+
+        this.gyantView = gyantChat.createView(this, getLifecycle());
 
         FrameLayout frameLayout = (FrameLayout) findViewById(R.id.frame_layout);
         frameLayout.addView(gyantView);

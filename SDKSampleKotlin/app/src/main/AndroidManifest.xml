@@ -14,8 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DisplayGyantViewWithThemeActivity"
+            android:name=".DisplayGyantViewWithPushTokenActivity"
+            android:label="@string/title_activity_display_gyant_view_with_push_token"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DisplayGyantViewWithMessageListener"
+            android:label="@string/title_activity_display_gyant_view_with_message_listener"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DisplayGyantViewWithThemeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DisplayGyantViewActivity"
             android:parentActivityName=".MainActivity" />

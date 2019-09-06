@@ -1,26 +1,28 @@
 package com.gyant.sdksamplekotlin
 
-import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-
 import android.os.Bundle
 import android.support.annotation.NonNull
 
-
 import com.gyant.gyantchatsdk.GyantChat
 import com.gyant.gyantchatsdk.GyantFragment
+
 
 class DisplayFragmentActivity : AppCompatActivity() {
     internal lateinit var frag: GyantFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        GyantChat.start( "client_id",  "patient_id", true);
+        val gyantChat = GyantChat.getInstance()
+            .clientId("client_id")
+            .patientId("patient_id")
+            .isDev(true)
+            .start()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_fragment)
 
-        frag = GyantChat.createFragment();
+        frag = gyantChat.createFragment();
 
         supportFragmentManager.beginTransaction()
             .add(R.id.frame_layout, frag,  BuildConfig.APPLICATION_ID + ".GyantFragment")

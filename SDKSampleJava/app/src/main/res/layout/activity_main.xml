@@ -51,6 +51,26 @@
             android:layout_marginBottom="1dp"
             android:onClick="changeToViewWithThemePage"
             android:text="Gyant Chat View With Theme" />
+
+        <Button
+            android:id="@+id/goToViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="1dp"
+            android:onClick="changeToViewWithMessageListener"
+            android:text="Gyant Chat View With Message Listener" />
+
+        <Button
+            android:id="@+id/goToViewPushToke"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="1dp"
+            android:onClick="changeToViewWithPushToken"
+            android:text="Gyant Chat View With Push Token Listener" />
     </LinearLayout>
 
 

@@ -34,4 +34,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayGyantViewWithThemeActivity.class);
         startActivity(intent);
     }
+
+
+    public void changeToViewWithMessageListener(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithMessageListenerActivity.class);
+        startActivity(intent);
+    }
+
+    public void changeToViewWithPushToken(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithPushTokenActivity.class);
+        startActivity(intent);
+    }
 }

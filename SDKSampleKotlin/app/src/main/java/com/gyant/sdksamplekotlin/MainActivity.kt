@@ -34,4 +34,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun changeToViewWithMessageListener(view: View) {
+        val intent = Intent(this, DisplayGyantViewWithMessageListener::class.java)
+        startActivity(intent)
+    }
+
+    fun changeToViewWithPushToken(view: View) {
+        val intent = Intent(this, DisplayGyantViewWithPushTokenActivity::class.java)
+        startActivity(intent)
+    }
+
 }

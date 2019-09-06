@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.12'
 
-     debugImplementation files('libs/gyantchatsdk-debug.aar')
+    debugImplementation files('libs/gyantchatsdk-debug.aar')
     releaseImplementation files('libs/gyantchatsdk-release.aar')
 
 }

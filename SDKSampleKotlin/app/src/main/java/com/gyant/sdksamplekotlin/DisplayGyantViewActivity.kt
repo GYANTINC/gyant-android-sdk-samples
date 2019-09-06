@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.support.annotation.NonNull
 import android.widget.FrameLayout
 
-
 import com.gyant.gyantchatsdk.GyantChat
 import com.gyant.gyantchatsdk.GyantView
+
 
 class DisplayGyantViewActivity : AppCompatActivity() {
     internal lateinit var gyantView: GyantView
@@ -16,9 +16,13 @@ class DisplayGyantViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_gyant_view)
 
-        GyantChat.start( "client_id",  "patient_id", true)
+        val gyantChat = GyantChat.getInstance()
+            .clientId("client_id")
+            .patientId("patient_id")
+            .isDev(true)
+            .start()
 
-        gyantView = GyantChat.creatView(this, lifecycle)
+        gyantView = gyantChat.createView(this, lifecycle)
 
         val frame = findViewById<FrameLayout>(R.id.frame_layout)
         frame.addView(gyantView)

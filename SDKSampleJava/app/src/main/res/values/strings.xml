@@ -2,4 +2,10 @@
     <string name="app_name">SDKSampleJava</string>
     <string name="title_activity_display_gyant_view_with_theme">DisplayGyantViewWithThemeActivity
     </string>
+    <string name="title_activity_display_gyant_view_with_message_listener">
+        DisplayGyantViewWithMessageListener
+    </string>
+    <string name="title_activity_display_gyant_view_with_push_token">DisplayGyantViewWithPushToken
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>
