@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.FrameLayout;
 import com.gyant.gyantchatsdk.GyantChat;
 import com.gyant.gyantchatsdk.GyantView;
@@ -31,5 +32,9 @@ public class DisplayGyantViewActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    void changePatientId(View view) {
+        GyantChat.getInstance().changePatientId("new_patient_id");
     }
 }

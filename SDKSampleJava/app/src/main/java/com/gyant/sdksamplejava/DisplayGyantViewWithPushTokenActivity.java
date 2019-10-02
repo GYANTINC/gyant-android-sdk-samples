@@ -40,7 +40,7 @@ public class DisplayGyantViewWithPushTokenActivity extends AppCompatActivity imp
 
 
     @Override
-    public void getToken(CompletionHandler callback){
+    public void getPushToken(CompletionHandler callback){
         callback.onComplete("token123");
     }
 }

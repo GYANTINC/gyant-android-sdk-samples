@@ -41,7 +41,7 @@ class DisplayGyantViewWithPushTokenActivity : AppCompatActivity(), GyantOnPushTo
     }
 
 
-    override fun getToken(callback: CompletionHandler) {
+    override fun getPushToken(callback: CompletionHandler<String>) {
         callback.onComplete("token123")
     }
 }

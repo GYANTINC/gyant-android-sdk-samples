@@ -1,14 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file(var)
-            storePassword '123456'
-            keyAlias = 'upload'
-            keyPassword '123456'
-        }
-    }
+
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {

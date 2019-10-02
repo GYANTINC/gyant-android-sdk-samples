@@ -3,6 +3,7 @@ package com.gyant.sdksamplekotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.NonNull
+import android.view.View
 import android.widget.FrameLayout
 
 import com.gyant.gyantchatsdk.GyantChat
@@ -30,5 +31,9 @@ class DisplayGyantViewActivity : AppCompatActivity() {
 
     override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
         this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    fun changePatientId(view: View) {
+        GyantChat.getInstance().changePatientId("new_patient_id")
     }
 }
