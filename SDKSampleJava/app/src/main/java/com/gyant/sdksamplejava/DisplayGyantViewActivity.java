@@ -33,8 +33,4 @@ public class DisplayGyantViewActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
-
-    void changePatientId(View view) {
-        GyantChat.getInstance().changePatientId("new_patient_id");
-    }
 }

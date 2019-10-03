@@ -33,7 +33,4 @@ class DisplayGyantViewActivity : AppCompatActivity() {
         this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    fun changePatientId(view: View) {
-        GyantChat.getInstance().changePatientId("new_patient_id")
-    }
 }
