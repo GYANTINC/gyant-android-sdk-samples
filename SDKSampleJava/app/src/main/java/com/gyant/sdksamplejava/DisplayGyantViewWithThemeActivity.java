@@ -1,12 +1,12 @@
 package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
-import com.gyant.gyantchatsdk.GyantChat;
-import com.gyant.gyantchatsdk.GyantView;
+import com.gyant.chat_sdk.GyantChat;
+import com.gyant.chat_sdk.GyantView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,14 +20,13 @@ public class DisplayGyantViewWithThemeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_gyant_view);
 
-        Map botPalette = new HashMap<String, String>();
+        Map<String, String> botPalette = new HashMap<>();
         botPalette.put("primaryColor1","ff0000");
 
-        Map providerPalette = new HashMap<String, String>();
+        Map<String, String> providerPalette = new HashMap<>();
         botPalette.put("primaryColor1","00ff00");
 
-
-        Map themeMap = new HashMap<String, Map<String, String>>();
+        Map<String, Map<String, String>> themeMap = new HashMap<String, Map<String, String>>();
         themeMap.put("bot", botPalette);
         themeMap.put("provider", providerPalette);
 

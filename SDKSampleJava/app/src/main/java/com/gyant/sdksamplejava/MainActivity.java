@@ -1,12 +1,9 @@
 package com.gyant.sdksamplejava;
 
-
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
     public void changeToFragmentPage(View view) {
@@ -25,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayGyantViewActivity.class);
         startActivity(intent);
     }
+
     public void changeToActivityPage(View view) {
         Intent intent = new Intent(this, DisplayGyantChatActivity.class);
         startActivity(intent);
@@ -34,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayGyantViewWithThemeActivity.class);
         startActivity(intent);
     }
-
 
     public void changeToViewWithMessageListener(View view) {
         Intent intent = new Intent(this, DisplayGyantViewWithMessageListenerActivity.class);

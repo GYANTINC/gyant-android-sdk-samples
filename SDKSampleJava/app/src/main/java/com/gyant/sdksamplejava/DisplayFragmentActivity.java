@@ -1,11 +1,11 @@
 package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.gyant.gyantchatsdk.GyantChat;
-import com.gyant.gyantchatsdk.GyantFragment;
+import com.gyant.chat_sdk.GyantChat;
+import com.gyant.chat_sdk.GyantFragment;
 
 public class DisplayFragmentActivity extends AppCompatActivity {
     GyantFragment frag;

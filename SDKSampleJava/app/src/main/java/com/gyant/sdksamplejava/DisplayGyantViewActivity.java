@@ -2,12 +2,12 @@ package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.widget.FrameLayout;
-import com.gyant.gyantchatsdk.GyantChat;
-import com.gyant.gyantchatsdk.GyantView;
+import com.gyant.chat_sdk.GyantChat;
+import com.gyant.chat_sdk.GyantView;
 
 public class DisplayGyantViewActivity extends AppCompatActivity {
     GyantView gyantView;

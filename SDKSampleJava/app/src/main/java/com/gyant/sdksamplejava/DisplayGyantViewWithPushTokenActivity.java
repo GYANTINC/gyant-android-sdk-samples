@@ -1,14 +1,14 @@
 package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
-import com.gyant.gyantchatsdk.GyantChat;
-import com.gyant.gyantchatsdk.GyantOnPushTokenListener;
-import com.gyant.gyantchatsdk.CompletionHandler;
-import com.gyant.gyantchatsdk.GyantView;
+import com.gyant.chat_sdk.GyantChat;
+import com.gyant.chat_sdk.GyantOnPushTokenListener;
+import com.gyant.chat_sdk.CompletionHandler;
+import com.gyant.chat_sdk.GyantView;
 
 
 public class DisplayGyantViewWithPushTokenActivity extends AppCompatActivity implements GyantOnPushTokenListener{
