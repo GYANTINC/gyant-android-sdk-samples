@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SDKSampleKotlin</string>
+    <string name="title_activity_display_gyant_view_with_theme">DisplayGyantViewWithThemeActivity
+    </string>
+    <string name="title_activity_display_gyant_view_with_message_listener">
+        DisplayGyantViewWithMessageListener
+    </string>
+    <string name="title_activity_display_gyant_view_with_push_token">
+        DisplayGyantViewWithPushTokenActivity
+    </string>
+</resources>
