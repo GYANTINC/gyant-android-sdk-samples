@@ -18,9 +18,9 @@ class DisplayGyantViewWithPatientDataActivity : AppCompatActivity() {
 
         val patientData = GyantChatPatientData()
         patientData.patientId = "<YOUR-PATIENT-ID>"
-        patientData.visitReason = "fever"
-        patientData.gender = "male"
-        patientData.dateOfBirth = "2001-03-26T20:28:32.383+0000"
+        patientData.visitReason = "<YOUR-PATIENT-VISIT-REASON>"
+        patientData.gender = "<YOUR-PATIENT-GENDER>"
+        patientData.dateOfBirth = "<YOUR-PATIENT-DATE-OF-BIRTH>"
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
