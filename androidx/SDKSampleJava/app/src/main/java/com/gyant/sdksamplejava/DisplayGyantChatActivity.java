@@ -12,7 +12,7 @@ public class DisplayGyantChatActivity extends GyantChatActivity {
         //gyantChatInit should be called before onCreate
         GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id").start();
+                .start();
 
         super.onCreate(savedInstanceState);
     }

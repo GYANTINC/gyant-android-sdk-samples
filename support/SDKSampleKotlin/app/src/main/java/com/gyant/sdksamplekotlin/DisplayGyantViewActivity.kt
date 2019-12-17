@@ -1,8 +1,8 @@
 package com.gyant.sdksamplekotlin
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.NonNull
+import android.support.v7.app.AppCompatActivity
 import android.widget.FrameLayout
 
 import com.gyant.chat_sdk.GyantChat
@@ -13,11 +13,10 @@ class DisplayGyantViewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_gyant_view)
+        setContentView(R.layout.activity_generic)
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
             .isDev(true)
             .start()
 
@@ -28,7 +27,7 @@ class DisplayGyantViewActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
-        this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
 }

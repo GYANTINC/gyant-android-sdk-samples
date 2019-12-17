@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun changeToViewWithMessageListener(view: View) {
-        val intent = Intent(this, DisplayGyantViewWithMessageListener::class.java)
+    fun changeToViewWithListenerPage(view: View) {
+        val intent = Intent(this, DisplayGyantViewWithListenerActivity::class.java)
         startActivity(intent)
     }
 
-    fun changeToViewWithPushToken(view: View) {
-        val intent = Intent(this, DisplayGyantViewWithPushTokenActivity::class.java)
+    fun changeToViewWithPatientDataPage(view: View) {
+        val intent = Intent(this, DisplayGyantViewWithPatientDataActivity::class.java)
         startActivity(intent)
     }
 

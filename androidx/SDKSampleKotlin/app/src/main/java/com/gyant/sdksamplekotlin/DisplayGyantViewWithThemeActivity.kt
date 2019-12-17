@@ -16,7 +16,7 @@ class DisplayGyantViewWithThemeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_gyant_view)
+        setContentView(R.layout.activity_generic)
 
         val botPalette = HashMap<String, String>()
         botPalette["primaryColor1"] = "ff0000"
@@ -24,14 +24,12 @@ class DisplayGyantViewWithThemeActivity : AppCompatActivity() {
         val providerPalette = HashMap<String, String>()
         botPalette["primaryColor1"] = "00ff00"
 
-
         val themeMap = HashMap<String, Map<String, String>>()
         themeMap["bot"] = botPalette
         themeMap["provider"] = providerPalette
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
             .withTheme(themeMap)
             .isDev(true)
             .start()

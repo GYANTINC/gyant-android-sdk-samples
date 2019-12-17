@@ -3,23 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gyant.sdksamplejava">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".DisplayGyantViewWithPushTokenActivity"
-            android:label="@string/title_activity_display_gyant_view_with_push_token"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".DisplayGyantViewWithMessageListenerActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".DisplayGyantViewWithThemeActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
         <activity
             android:name=".DisplayGyantViewActivity"
             android:parentActivityName=".MainActivity" />
@@ -35,6 +31,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
+        <activity
+            android:name=".DisplayGyantViewWithListenerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+        android:name=".DisplayGyantViewWithThemeActivity"
+        android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".DisplayGyantViewWithPatientDataActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,10 +51,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    </application>
+
 
 </manifest>

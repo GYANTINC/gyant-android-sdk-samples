@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void changeToViewWithMessageListener(View view) {
-        Intent intent = new Intent(this, DisplayGyantViewWithMessageListenerActivity.class);
+    public void changeToViewWithPatientDataPage(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithPatientDataActivity.class);
         startActivity(intent);
     }
 
-    public void changeToViewWithPushToken(View view) {
-        Intent intent = new Intent(this, DisplayGyantViewWithPushTokenActivity.class);
+    public void changeToViewWithListener(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithListenerActivity.class);
         startActivity(intent);
     }
 }

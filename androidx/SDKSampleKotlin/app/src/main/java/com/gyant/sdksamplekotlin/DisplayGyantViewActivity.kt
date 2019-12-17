@@ -10,15 +10,14 @@ import com.gyant.chat_sdk.GyantView
 
 
 class DisplayGyantViewActivity : AppCompatActivity() {
-    internal lateinit var gyantView: GyantView
+    private lateinit var gyantView: GyantView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_gyant_view)
+        setContentView(R.layout.activity_generic)
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
             .isDev(true)
             .start()
 
@@ -29,7 +28,7 @@ class DisplayGyantViewActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
-        this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
 }

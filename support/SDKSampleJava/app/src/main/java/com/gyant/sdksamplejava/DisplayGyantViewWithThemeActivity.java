@@ -12,13 +12,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DisplayGyantViewWithThemeActivity extends AppCompatActivity {
-
     private GyantView gyantView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_gyant_view);
+        setContentView(R.layout.activity_generic);
 
         Map<String, String> botPalette = new HashMap<String, String>();
         botPalette.put("primaryColor1","ff0000");
@@ -32,9 +31,9 @@ public class DisplayGyantViewWithThemeActivity extends AppCompatActivity {
 
         GyantChat gyantChat = GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id")
                 .isDev(true)
-                .withTheme(themeMap).start();
+                .withTheme(themeMap)
+                .start();
 
         this.gyantView = gyantChat.createView(this, getLifecycle());
 

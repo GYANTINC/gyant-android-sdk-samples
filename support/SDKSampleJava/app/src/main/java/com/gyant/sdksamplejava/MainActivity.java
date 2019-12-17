@@ -17,12 +17,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayFragmentActivity.class);
         startActivity(intent);
     }
-
     public void changeToViewPage(View view) {
         Intent intent = new Intent(this, DisplayGyantViewActivity.class);
         startActivity(intent);
     }
-
     public void changeToActivityPage(View view) {
         Intent intent = new Intent(this, DisplayGyantChatActivity.class);
         startActivity(intent);
@@ -33,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void changeToViewWithMessageListener(View view) {
-        Intent intent = new Intent(this, DisplayGyantViewWithMessageListenerActivity.class);
+    public void changeToViewWithPatientDataPage(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithPatientDataActivity.class);
         startActivity(intent);
     }
 
-    public void changeToViewWithPushToken(View view) {
-        Intent intent = new Intent(this, DisplayGyantViewWithPushTokenActivity.class);
+    public void changeToViewWithListener(View view) {
+        Intent intent = new Intent(this, DisplayGyantViewWithListenerActivity.class);
         startActivity(intent);
     }
 }

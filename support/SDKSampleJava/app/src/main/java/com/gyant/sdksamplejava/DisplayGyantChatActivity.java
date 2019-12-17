@@ -9,10 +9,9 @@ public class DisplayGyantChatActivity extends GyantChatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        //gyantChatInit should be called before onCreate
         GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id").start();
+                .start();
 
         super.onCreate(savedInstanceState);
     }

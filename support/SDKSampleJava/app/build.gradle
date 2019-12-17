@@ -9,7 +9,7 @@ repositories {
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.gyant.sdksamplejava"
+        applicationId "com.gyant.support.sdksamplejava"
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 28
@@ -32,11 +32,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    def gyantSDKVersion="1.0.9"
+    def gyantSDKVersion="1.1.0"
     debugImplementation "com.gyant.gyant_chat_sdk:gyant_chat_sdk_debug:$gyantSDKVersion"
     releaseImplementation "com.gyant.gyant_chat_sdk:gyant_chat_sdk_release:$gyantSDKVersion"
 
-    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     //noinspection GradleDependency
