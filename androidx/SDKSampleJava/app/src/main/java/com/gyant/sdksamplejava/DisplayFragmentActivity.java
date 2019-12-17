@@ -13,11 +13,12 @@ public class DisplayFragmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_fragment);
+        setContentView(R.layout.activity_generic);
 
         GyantChat gyantChat =  GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id").isDev(true).start();
+                .isDev(true)
+                .start();
 
         frag = gyantChat.createFragment();
 

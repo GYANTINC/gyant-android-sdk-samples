@@ -7,20 +7,18 @@ import androidx.annotation.NonNull
 import com.gyant.chat_sdk.GyantChat
 import com.gyant.chat_sdk.GyantFragment
 
-
 class DisplayFragmentActivity : AppCompatActivity() {
-    internal lateinit var frag: GyantFragment
+    private lateinit var frag: GyantFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
             .isDev(true)
             .start()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_fragment)
+        setContentView(R.layout.activity_generic)
 
         frag = gyantChat.createFragment();
 
@@ -30,6 +28,6 @@ class DisplayFragmentActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
-        this.frag.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        frag.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }

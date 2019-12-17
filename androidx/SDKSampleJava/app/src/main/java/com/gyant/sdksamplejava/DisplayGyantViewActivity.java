@@ -14,12 +14,12 @@ public class DisplayGyantViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_gyant_view);
+        setContentView(R.layout.activity_generic);
 
         GyantChat gyantChat = GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id")
-                .isDev(true).start();
+                .isDev(true)
+                .start();
 
         this.gyantView = gyantChat.createView(this, getLifecycle());
 

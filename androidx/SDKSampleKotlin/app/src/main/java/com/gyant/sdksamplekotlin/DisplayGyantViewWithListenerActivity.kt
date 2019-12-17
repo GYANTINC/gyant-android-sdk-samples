@@ -4,41 +4,46 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.widget.FrameLayout
-
-import com.gyant.chat_sdk.GyantChat
-import com.gyant.chat_sdk.GyantOnMessageListener
-import com.gyant.chat_sdk.GyantView
+import com.gyant.chat_sdk.*
 
 
-class DisplayGyantViewWithMessageListener : AppCompatActivity(), GyantOnMessageListener {
-    internal lateinit var gyantView: GyantView
+class DisplayGyantViewWithListenerActivity : AppCompatActivity(), GyantChatListener {
+    private lateinit var gyantView: GyantView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_gyant_view)
+        setContentView(R.layout.activity_generic)
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
-            .onMessage(this)
+            .listener(this)
             .isDev(true)
             .start()
 
-        this.gyantView = gyantChat.createView(this, lifecycle)
+        gyantView = gyantChat.createView(this, lifecycle)
 
-        val frameLayout = findViewById(R.id.frame_layout) as FrameLayout
+        val frameLayout = findViewById<FrameLayout>(R.id.frame_layout)
         frameLayout.addView(gyantView)
     }
-
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String>,
         grantResults: IntArray
     ) {
-        this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    override fun onDiagnosis(diagnosis: MutableMap<Any?, Any?>?) {
+        Log.d("GyantDiagnosis", diagnosis.toString())
     }
 
     override fun onMessage(message: String) {
         Log.d("GyantMessage", message)
     }
+
+    override fun getPushToken(p0: CompletionHandler<String>?) {
+        TODO("not implemented")
+    }
+
 }

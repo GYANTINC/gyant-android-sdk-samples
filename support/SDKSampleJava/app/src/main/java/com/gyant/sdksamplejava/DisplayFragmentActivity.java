@@ -1,8 +1,8 @@
 package com.gyant.sdksamplejava;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 
 import com.gyant.chat_sdk.GyantChat;
 import com.gyant.chat_sdk.GyantFragment;
@@ -13,11 +13,12 @@ public class DisplayFragmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_fragment);
+        setContentView(R.layout.activity_generic);
 
         GyantChat gyantChat =  GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id").isDev(true).start();
+                .isDev(true)
+                .start();
 
         frag = gyantChat.createFragment();
 

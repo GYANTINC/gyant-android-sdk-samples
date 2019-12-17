@@ -6,30 +6,25 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.FrameLayout
 
 import com.gyant.chat_sdk.GyantChat
+import com.gyant.chat_sdk.GyantChatPatientData
 import com.gyant.chat_sdk.GyantView
 
-import java.util.HashMap
-
-class DisplayGyantViewWithThemeActivity : AppCompatActivity() {
+class DisplayGyantViewWithPatientDataActivity : AppCompatActivity() {
     private lateinit var gyantView: GyantView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_generic)
 
-        val botPalette = HashMap<String, String>()
-        botPalette["primaryColor1"] = "ff0000"
-
-        val providerPalette = HashMap<String, String>()
-        botPalette["primaryColor1"] = "00ff00"
-
-        val themeMap = HashMap<String, Map<String, String>>()
-        themeMap["bot"] = botPalette
-        themeMap["provider"] = providerPalette
+        val patientData = GyantChatPatientData()
+        patientData.patientId = "<YOUR-PATIENT-ID>"
+        patientData.visitReason = "<YOUR-PATIENT-VISIT-REASON>"
+        patientData.gender = "<YOUR-PATIENT-GENDER>"
+        patientData.dateOfBirth = "<YOUR-PATIENT-DATE-OF-BIRTH>"
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .withTheme(themeMap)
+            .patientData(patientData)
             .isDev(true)
             .start()
 

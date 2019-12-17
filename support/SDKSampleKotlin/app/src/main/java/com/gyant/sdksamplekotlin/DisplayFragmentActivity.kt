@@ -1,12 +1,11 @@
 package com.gyant.sdksamplekotlin
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.NonNull
+import android.support.v7.app.AppCompatActivity
 
 import com.gyant.chat_sdk.GyantChat
 import com.gyant.chat_sdk.GyantFragment
-
 
 class DisplayFragmentActivity : AppCompatActivity() {
     private lateinit var frag: GyantFragment
@@ -15,12 +14,11 @@ class DisplayFragmentActivity : AppCompatActivity() {
 
         val gyantChat = GyantChat.getInstance()
             .clientId("client_id")
-            .patientId("patient_id")
             .isDev(true)
             .start()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_display_fragment)
+        setContentView(R.layout.activity_generic)
 
         frag = gyantChat.createFragment();
 
@@ -30,6 +28,6 @@ class DisplayFragmentActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, @NonNull permissions: Array<String>, @NonNull grantResults: IntArray) {
-        this.frag.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        frag.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }

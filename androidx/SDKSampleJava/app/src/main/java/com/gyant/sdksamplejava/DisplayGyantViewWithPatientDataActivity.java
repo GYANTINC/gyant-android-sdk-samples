@@ -1,27 +1,33 @@
 package com.gyant.sdksamplejava;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.gyant.chat_sdk.GyantChat;
-import com.gyant.chat_sdk.GyantOnPushTokenListener;
-import com.gyant.chat_sdk.CompletionHandler;
+import com.gyant.chat_sdk.GyantChatPatientData;
 import com.gyant.chat_sdk.GyantView;
 
-public class DisplayGyantViewWithPushTokenActivity extends AppCompatActivity implements GyantOnPushTokenListener{
+public class DisplayGyantViewWithPatientDataActivity extends AppCompatActivity {
+
     GyantView gyantView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_gyant_view);
+        setContentView(R.layout.activity_generic);
+
+        GyantChatPatientData patientData = new GyantChatPatientData();
+        patientData.patientId = "<YOUR-PATIENT-ID>";
+        patientData.visitReason = "<YOUR-PATIENT-VISIT-REASON>";
+        patientData.gender = "<YOUR-PATIENT-GENDER>";
+        patientData.dateOfBirth = "<YOUR-PATIENT-DATE-OF-BIRTH>";
 
         GyantChat gyantChat = GyantChat.getInstance()
                 .clientId("client_id")
-                .patientId("patient_id")
-                .setOnPushTokenListener(this)
+                .patientData(patientData)
                 .isDev(true)
                 .start();
 
@@ -31,14 +37,10 @@ public class DisplayGyantViewWithPushTokenActivity extends AppCompatActivity imp
         frameLayout.addView(gyantView);
     }
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         this.gyantView.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
-
-    @Override
-    public void getPushToken(CompletionHandler<String> callback){
-        callback.onComplete("token123");
-    }
 }
+
+
