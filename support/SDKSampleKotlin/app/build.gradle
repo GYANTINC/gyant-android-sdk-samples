@@ -34,7 +34,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    def gyantSDKVersion="1.1.0"
+    def gyantSDKVersion="1.1.1"
     debugImplementation "com.gyant.gyant_chat_sdk:gyant_chat_sdk_debug:$gyantSDKVersion"
     releaseImplementation "com.gyant.gyant_chat_sdk:gyant_chat_sdk_release:$gyantSDKVersion"
 
